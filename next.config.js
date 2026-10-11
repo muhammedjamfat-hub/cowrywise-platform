@@ -3,12 +3,19 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
         hostname: '**',
       },
     ],
+  },
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    ignoreDuringBuilds: false,
   },
 };
 

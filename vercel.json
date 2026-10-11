@@ -1,0 +1,9 @@
+{
+  "env": {
+    "NEXT_PUBLIC_APP_NAME": "@COWRYWISE",
+    "NEXT_PUBLIC_API_URL": "@api_url"
+  },
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "framework": "nextjs"
+}
