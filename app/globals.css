@@ -1,73 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import './globals.css';
+import type { Metadata } from 'next';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+export const metadata: Metadata = {
+  title: 'COWRYWISE',
+  description: 'Professional investment platform',
+};
 
-body {
-  background-color: #f8fafc;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  color: #0f172a;
-}
-
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-
-/* Loading Animation */
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-.animate-pulse-cowry {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-/* Fade Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.3s ease-out;
-}
-
-/* Form Inputs */
-input, textarea, select {
-  @apply rounded-cowry border border-gray-200 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cowry-blue focus:border-transparent;
-}
-
-input:disabled, textarea:disabled, select:disabled {
-  @apply bg-gray-50 cursor-not-allowed opacity-50;
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
 }
